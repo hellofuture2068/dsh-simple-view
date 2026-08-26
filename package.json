@@ -1,6 +1,7 @@
 {
   "name": "dsh-simple-view",
   "version": "1.0.0",
+  "description": "Declutter the DeepSeek Harness chat: hide agent execution-log rows (Think / context injection / tool calls), tighten message spacing and font sizes, wrap messages in rounded-corner bubbles, and inject an editable \"reply concisely\" instruction into the system prompt.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -9,14 +10,38 @@
     "./package.json": "./package.json"
   },
   "dsh": {
+    "engines": {
+      "dsh": ">=0.1.1-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "inject": [],
       "platform": "web"
     }
   },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
   "peerDependencies": {
     "@deepseek-ai/dsh-settings": "0.1.1-rc.2",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellofuture2068/dsh-simple-view.git"
+  },
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "harness",
+    "plugin",
+    "chat",
+    "ui"
+  ]
 }

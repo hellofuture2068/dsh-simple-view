@@ -1,0 +1,6 @@
+# dsh-simple-view: hide agent execution-log rows in the chat transcript
+# (Think, context injection, tool calls). Errors and user questions stay visible.
+# This makes the plugin self-registering when installed as a bundle.
+- insert:
+    - id: simple-view
+      name: dsh-simple-view
