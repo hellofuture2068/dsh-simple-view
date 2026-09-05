@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+- Loosen the `@deepseek-ai/dsh-settings` peerDependency range to `>=0.1.1-rc.2` so the plugin stays compatible with newer DSH (0.1.2-rc.1+) without a manual patch.
+
 ## 1.1.1
 
 - Fix: assistant messages with no visible text block (e.g. only hidden Think / tool references) no longer render as empty bubbles — they are hidden entirely.
